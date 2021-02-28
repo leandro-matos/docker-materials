@@ -37,7 +37,7 @@ Entrypoint: Principal processo do container;
 24) Qual o comando utilizado para buildar (construir) uma imagem? #docker image build
 
 
-======================================================================================================================================
+==============================================================================================================
 
 ## Comandos Úteis para entendimento sobre o Docker:
 01) curl -fsSL https://get.docker.com/ | bash

@@ -45,30 +45,30 @@ Resp: /var/lib/docker/volumes
 13) Qual o comando utilizado para ver detalhes sobre um determinado volume?
 Resp: #docker volume inspect giropops
 
-## Comandos Úteis para entendimento sobre o Docker:
-# docker container run -ti --mount type=bind,src=/volume,dst=/volume ubuntu
-# docker container run -ti --mount type=bind,src=/root/primeiro_container,dst=/volume ubuntu
-# docker container run -ti --mount type=bind,src=/root/primeiro_container,dst=/volume,ro ubuntu
-# docker volume create giropops
-# docker volume rm giropops
-# docker volume inspect giropops
-# docker volume prune
-# docker container run -d --mount type=volume,source=giropops,destination=/var/opa  nginx
-# docker container create -v /data --name dbdados centos
-# docker run -d -p 5432:5432 --name pgsql1 --volumes-from dbdados -e POSTGRESQL_USER=docker -e POSTGRESQL_PASS=docker -e POSTGRESQL_DB=docker kamui/postgresql
-# docker run -d -p 5433:5432 --name pgsql2 --volumes-from dbdados -e  POSTGRESQL_USER=docker -e POSTGRESQL_PASS=docker -e POSTGRESQL_DB=docker kamui/postgresql
-# docker run -ti --volumes-from dbdados -v $(pwd):/backup debian tar -cvf /backup/backup.tar /data
+### Comandos Úteis para entendimento sobre o Docker:
+01) docker container run -ti --mount type=bind,src=/volume,dst=/volume ubuntu
+02) docker container run -ti --mount type=bind,src=/root/primeiro_container,dst=/volume ubuntu
+03) docker container run -ti --mount type=bind,src=/root/primeiro_container,dst=/volume,ro ubuntu
+04) docker volume create giropops
+05) docker volume rm giropops
+06) docker volume inspect giropops
+07) docker volume prune
+08) docker container run -d --mount type=volume,source=giropops,destination=/var/opa  nginx
+09) docker container create -v /data --name dbdados centos
+10) docker run -d -p 5432:5432 --name pgsql1 --volumes-from dbdados -e POSTGRESQL_USER=docker -e POSTGRESQL_PASS=docker -e POSTGRESQL_DB=docker kamui/postgresql
+11) docker run -d -p 5433:5432 --name pgsql2 --volumes-from dbdados -e  POSTGRESQL_USER=docker -e POSTGRESQL_PASS=docker -e POSTGRESQL_DB=docker kamui/postgresql
+12) docker run -ti --volumes-from dbdados -v $(pwd):/backup debian tar -cvf /backup/backup.tar /data
 
 Forma Antiga:
-#### docker container create -v /data --name dbdados centos
-#### docker run -d -p 5432:5432 --name pgsql1 --volumes-from dbdados -e POSTGRESQL_USER=docker -e POSTGRESQL_PASS=docker -e POSTGRESQL_DB=docker kamui/postgresql
+01) docker container create -v /data --name dbdados centos
+02) docker run -d -p 5432:5432 --name pgsql1 --volumes-from dbdados -e POSTGRESQL_USER=docker -e POSTGRESQL_PASS=docker -e POSTGRESQL_DB=docker kamui/postgresql
 
 Forma Nova:
-#### docker volume create dbdados
-#### docker run -d -p 5433:5432 --mount type=volume,src=dbdados,dst=/data -e POSTGRESQL_USER=docker -e POSTGRESQL_PASS=docker -e POSTGRESQL_DB=docker kamui/postgresql
-#### docker volume inspect dbdados
+01) docker volume create dbdados
+02) docker run -d -p 5433:5432 --mount type=volume,src=dbdados,dst=/data -e POSTGRESQL_USER=docker -e POSTGRESQL_PASS=docker -e POSTGRESQL_DB=docker kamui/postgresql
+03) docker volume inspect dbdados
 
 Backup dos Dados:
-#### docker container run -ti --mount type=volume,src=dbdados,dst=/data --mount type=bind,src=G:\docker\projetos\backup,dst=/backup debian tar -cvf /backup/bkpbanco.tar /data
-#### tar -xvf .\bkpbanco.tar
+01) docker container run -ti --mount type=volume,src=dbdados,dst=/data --mount type=bind,src=G:\docker\projetos\backup,dst=/backup debian tar -cvf /backup/bkpbanco.tar /data
+02) tar -xvf .\bkpbanco.tar
 

@@ -40,45 +40,45 @@ Entrypoint: Principal processo do container;
 ======================================================================================================================================
 
 ## Comandos Úteis para entendimento sobre o Docker:
-#### curl -fsSL https://get.docker.com/ | bash
-#### docker version
-#### docker container ls
-#### docker container run hello-world
-#### docker image ls
-#### docker ps
-#### docker container ls
-#### docker container ls -a
-#### docker container run -ti centos:7
-#### docker container run -ti ubuntu
-#### docker container -d nginx
-#### docker container attach [CONTAINER ID]
-#### docker container exec -ti [CONTAINER ID] [COMANDO]
-#### docker container start [CONTAINER ID]
-#### docker container stop [CONTAINER ID]
-#### docker container restart [CONTAINER ID]
-#### docker container pause [CONTAINER ID]
-#### docker container unpause [CONTAINER ID]
-#### docker container inspect [CONTAINER ID]
-#### docker container logs -f [CONTAINER ID]
-#### docker container rm [CONTAINER ID]
-#### docker container rm -f [CONTAINER ID]
-#### docker container exec -ti [CONTAINER ID] [COMANDO]
-#### docker container run -d nginx
-#### docker container stats [CONTAINER ID]
-#### docker container top [CONTAINER ID]
-#### docker container run -d -m 128M --cpus 0.5 nginx
-#### docker container update --memory 64M --cpus 0.4 nginx
-#### docker container inspect [CONTAINER ID]
-#### docker container stats [CONTAINER ID]
-#### docker container top [CONTAINER ID]
+01) curl -fsSL https://get.docker.com/ | bash
+02) docker version
+03) docker container ls
+04) docker container run hello-world
+05) docker image ls
+06) docker ps
+07) docker container ls
+08) docker container ls -a
+09) docker container run -ti centos:7
+10) docker container run -ti ubuntu
+11) docker container -d nginx
+12) docker container attach [CONTAINER ID]
+13) docker container exec -ti [CONTAINER ID] [COMANDO]
+14) docker container start [CONTAINER ID]
+15) docker container stop [CONTAINER ID]
+16) docker container restart [CONTAINER ID]
+17) docker container pause [CONTAINER ID]
+18) docker container unpause [CONTAINER ID]
+19) docker container inspect [CONTAINER ID]
+20) docker container logs -f [CONTAINER ID]
+21) docker container rm [CONTAINER ID]
+22) docker container rm -f [CONTAINER ID]
+23) docker container exec -ti [CONTAINER ID] [COMANDO]
+24) docker container run -d nginx
+25) docker container stats [CONTAINER ID]
+26) docker container top [CONTAINER ID]
+27) docker container run -d -m 128M --cpus 0.5 nginx
+28) docker container update --memory 64M --cpus 0.4 nginx
+29) docker container inspect [CONTAINER ID]
+30) docker container stats [CONTAINER ID]
+31) docker container top [CONTAINER ID]
 
 ## Comando executados dentro do container:
-### apt-get update
-### apt-get install stress
-### stress --cpu 1 --vm-bytes 128M --vm1
+01) apt-get update
+02) apt-get install stress
+03) stress --cpu 1 --vm-bytes 128M --vm1
 
 ## Criar DockerFile
-### docker image build -t [nome da imagem]:1.0
-### docker image ls
-### docker container run -d [nome da imagem]:1.0
-### docker container logs -f [CONTAINER ID]
+01) docker image build -t [nome da imagem]:1.0
+02) docker image ls
+03) docker container run -d [nome da imagem]:1.0
+04) docker container logs -f [CONTAINER ID]
